@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create_creating object as {"key":"value"}</h2>
+    <script type="text/javascript">
+      var langs = {
+        "Neo4j":"Cypher",
+        "RDB":"Sql",
+        "Web":"JavaScript",
+        "Jupyter":"Python"
+      };
+      document.write("Neo4j : "+langs.Neo4j+"<br>");
+      document.write("RDB : "+langs.RDB+"<br>");
+      document.write("Web : "+langs.Web+"<br>");
+      document.write("Jupyter : "+langs.Jupyter+"<br>");
+      langs.Korea = "Korean";
+      document.write("Korea : "+langs.Korea+"<br>");
+      langs["United States"] = "English";//이름 공백 포함 시 [] 안에 넣어주기
+      document.write("United States : "+langs["United States"]+"<br>");
+    </script>
+    <h2>Iterate_loop for(key in Object)</h2>
+    <script>
+      for(var key in langs){
+        document.write(langs[key]+' is used in '+key+'<br>');
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <h5>Property: 객체에 소속된 변수(key값)</h5>
+    <h5>MethosL: 객체에 소속된 함수 ex_showAll</h5>
+    <script>
+      langs.showAll = function(){
+        for(var key in this) {
+          document.write(key+" : "+this[key]+'<br>');
+        } //왜 showAll부터 전부 그대로 출력되는거지?
+      }
+      langs.showAll();
+    </script>
+  </body>
+</html>

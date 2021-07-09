@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Function</h1>
+    <h2>Basic_function name()</h2>
+    <ul>
+      <script>
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+    <h2>Parameter & Argument</h2>
+    <script>
+      function onePlusOne(){
+        document.write(1+1+'<br>');
+      }
+      onePlusOne();
+      function sum(left,right){ //left, right는 argument(매개변수)
+        document.write(left+right+'<br>');
+      }
+      function sumRed(left,right){
+        document.write('<div style="color:red">'+(left+right)+'</div>');
+      }//이거 연산이 아니고 문자로 합쳐지는데? 문자로 인식안하게 묶어줘야함
+      sum(2,4); //2,4는 parameter
+      sumRed(34,234);
+    </script>
+    <h2>Return</h2>
+    <script>
+      function sum2(left,right){
+        return left+right;
+      }
+      document.write(sum2(2,3)+'<br>');
+      document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+      document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+    </script>
+  </body>
+</html>
