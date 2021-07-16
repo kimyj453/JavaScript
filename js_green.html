@@ -118,7 +118,28 @@
       document.write(algo[0].toUpperCase()+"<br>");
       document.write(algo[1].toUpperCase()+"<br>");
       document.write(algo[4].toUpperCase()+"<br>");
-    </script>
+      </script>
+
+      <h2>JS array</h2>
+      <script>
+      var lang = ['korean', 'english', 'french'];
+      document.write(lang+"<br>");
+
+      lang.push('cypher');
+      document.write(lang+"<br>");
+
+      lang = lang.concat(['python','javascript']); //앞에 lang = 있어야해. why?
+      document.write(lang+"<br>");
+
+      lang.unshift('spanish');
+      document.write(lang+"<br>");
+
+      lang.pop();
+      document.write(lang+"<br>");
+
+      lang.splice(0,1,'javascript'); //(인덱스,제거할갯수,추가할애들...)
+      document.write(lang+"<br>");
+      </script>
 
   </body>
 </html>
