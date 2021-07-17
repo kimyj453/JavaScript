@@ -5,7 +5,6 @@
     <title>JavaScript_green</title>
   </head>
   <body>
-
     <h1> && AND || OR </h1>
     <script>
       var id = prompt('what is your ID');
@@ -81,7 +80,7 @@
 
       //Input & Output
       function get_1(){
-        return 1; //여기까지만 실행하고 함수밖으로 나감
+        return 1; //여기까지만 실행하고 그 결과 반환
         return 3;
         return 5;
       }
@@ -90,7 +89,7 @@
       function get_apple(a1, a2){
         return a1 + a2;
       }
-      alert(get_apple(1,'dsef')); basic
+      alert(get_apple(1,'dsef')); //basic
 
       get_apple = function(a1, a2){
                     return a1 + a2;
@@ -107,7 +106,7 @@
       <h1>배열(array)</h1>
       <script>
       var algo = ['Centrality', 'Node2vec', 'Similarity'];
-      algo
+
       function get_algo(){
         return ['Centrality', 'Node2vec', 'Similarity','PageRank'];
       }
@@ -118,6 +117,8 @@
       document.write(algo[0].toUpperCase()+"<br>");
       document.write(algo[1].toUpperCase()+"<br>");
       document.write(algo[4].toUpperCase()+"<br>");
+      // Uncaught TypeError: Cannot read property 'toUpperCase' of undefined at js_green.html:120 왜 error날까?
+
       </script>
 
       <h2>JS array</h2>
@@ -142,6 +143,10 @@
 
       lang.sort();
       document.write(lang+"<br>");
+
+      for (var i in lang){
+        document.write(lang[i]+",");
+      }
       </script>
 
   </body>
