@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript_green</title>
+    Season1_1~37강 array까지
+  </head>
+  <body>
+    <h1> && AND || OR </h1>
+    <script>
+      var id = prompt('what is your ID');
+      if (id == 'kimyj453' || id == 'dPwls' || id == 'yejin') {
+          var pw = prompt('password?');
+          if ( pw == '1234'){
+          alert('Welcome ' + id);
+          } else {
+            alert('넌 누구');
+          }
+        }
+      </script>
 
+    <h1>Loop and interate</h1>
+      <script>
+      //while 반복문
+      var i = 0;
+      while(i < 100){
+        document.write("Hello Yejin "+i+"<br />");
+        i = i + 1;
+      }
+
+      //for 반복문
+      for (var i = 0; i < 100; i++){
+        document.write("Hello Yejin "+i+"<br />");
+      }
+      i=0;
+      0
+      alert(++i); //기존 i를 증가시킨 다음 출력
+      undefined
+      alert(i++); //기존 i를 출력한 다음 증가
+      undefined
+      i
+      2
+
+      //break 반복문 종료 continue 반복문 중단
+      for (var i = 0; i < 100; i++){
+        if (i === 30){
+          break; //여기서 중단하고 밖으로 빠져나가
+        }
+        if (i === 5){
+          continue; //여기서 뒤에 실행하지 말고 다시 반복문으로 돌아가
+        }
+        document.write("Hello Yejin "+i+"<br />");
+      }
+
+      //for ( ){ for() ...}반복문의 중첩
+      for (var i = 0; i < 10; i++){
+        for (var j = 0; j < 10; j++){
+          document.write("Hello Yejin "+i+j+"<br />");
+          //문자 + (숫자) + 문자 해주면 (숫자)를 문자열로 인식
+        }
+      }
+      </script>
+
+      <h1>function 함수</h1>
+      function 함수명([인자...[,인자]]){ <br>
+        코드<br>
+        return 반환값<br>
+      }
+      <script>
+      // function numbering() {
+      //   for(i=0; i<20; i++) {
+      //     document.write(i*5+"<br>");
+      //     }
+      //   }
+      //   numbering();
+      // var i = 0;
+      // while (i<100){
+      //   numbering();
+      //   i = i+1;
+      // } //이거 숫자도 안큰데 왜 에러나
+
+      //Input & Output
+      function get_1(){
+        return 1; //여기까지만 실행하고 그 결과 반환
+        return 3;
+        return 5;
+      }
+      alert(get_1());
+
+      function get_apple(a1, a2){
+        return a1 + a2;
+      }
+      alert(get_apple(1,'dsef')); //basic
+
+      get_apple = function(a1, a2){
+                    return a1 + a2;
+                  }
+      alert(get_apple(1,'dsef')); //get_apple이란 변수에 함수로 정의
+
+      (function () {
+        for(i=0; i<20; i++) {
+          document.write(i+"<br>");
+          }
+        })();//anonymous function 정의와 실행을 동시에, 일회성
+      </script>
+
+      <h1>배열(array)</h1>
+      <script>
+      var algo = ['Centrality', 'Node2vec', 'Similarity'];
+
+      function get_algo(){
+        return ['Centrality', 'Node2vec', 'Similarity','PageRank'];
+      }
+      algos = get_algo();
+      for(var i = 0; i < algos.length; i++) {
+        document.write(algos[i]+"<br>");
+      }
+
+      document.write(algo[0].toUpperCase()+"<br>");
+      document.write(algo[1].toUpperCase()+"<br>");
+      document.write(algo[2].toUpperCase()+"<br>");
+
+      </script>
+
+      <h2>JS array</h2>
+      <script>
+      var lang = ['korean', 'english', 'french'];
+      document.write(lang+"<br>");
+
+      lang.push('cypher');
+      document.write(lang+"<br>");
+
+      lang = lang.concat(['python','javascript']); //앞에 lang = 있어야해. why?
+      document.write(lang+"<br>");
+
+      lang.unshift('spanish');
+      document.write(lang+"<br>");
+
+      lang.pop();
+      document.write(lang+"<br>");
+
+      lang.splice(0,1,'javascript'); //(인덱스,제거할갯수,추가할애들...)
+      document.write(lang+"<br>");
+
+      lang.sort();
+      document.write(lang+"<br>");
+
+      for (var i in lang){
+        document.write(lang[i]+",");
+      }
+      </script>
+
+  </body>
+</html>

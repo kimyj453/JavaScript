@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src = "fnlib.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title></title>
+    Season1_38~55강 정규표현식까지
+  </head>
+
+  <body>
+    <h1>object 객체</h1>
+    {'index1':key1,'index2':key2,'index3':key3...} <br>
+    index로 문자를 사용하는 것 <br>
+    data를 담아내는 container 역할 <br>
+    associative array, map, dictionary 등 datatype <br>
+
+    <script>
+      const langs = {korean:100, english:300, french:200};
+      const ls = Object.values(langs);
+      document.write(ls + "<br>");
+      //langs.english or langs["english"]:key 표현방법
+      for (key in langs){
+        document.write('<li>subject: '+key+' proficiency: '+langs[key] + "</li>");
+      }
+    </script>
+
+    <h2>객체지향 프로그래밍</h2>
+    <h3>Use object as a basketr for relevant data and its function</h3>
+    <script type="text/javascript">
+      var lunch = {
+          'options': {bas:20, inha:23, greenwich:31, sinhwa:12, samsik:45},
+          'show': function(){
+            for (var name in this.options){
+              document.write("<li>"+name+": "+this.options[name]+"</li>")
+            }
+            alert('밥 먹을 시간!!!');
+            }
+          }
+          lunch.show();
+    </script>
+
+    <h3>module 불러오기</h3>
+    <script>
+      prompt(welcome());
+    </script>
+
+    <h3>jquery 불러오기</h3>
+    <ol id="list">
+      <li>empty</li>
+      <li>empty</li>
+      <li>empty</li>
+      <li>empty</li>
+    </ol>
+    <input type="button" id="hello_btn" value="hello">
+    <script type="text/javascript">
+      $('#hello_btn').click(function(){
+        $('#list li').text('HelloEveryone');
+      })
+    </script>
+
+  </body>
+</html>
