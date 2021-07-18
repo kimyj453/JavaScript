@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    생활코딩 WEB2 JavaScript 강의 중 grammar 부분
+
+    <h1>ex1_Write</h1>
+    <h1>JavaScript</h1>
+    <script type="text/javascript">
+    document.write('hello world')
+    document.write('<br>')
+    document.write(1+1);
+    </script>
+    <h1>HTML</h1>
+    hello world<br>
+    1+1
+
+    <h1>ex2_Event</h1>
+    <input type="button" value="hi" onclick="alert('hi')">
+    //alert()application programming Interface 즉 API의 한 종류
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key down!')">
+
+    <h1>ex3_Comparison Operator and Boolean</h1>
+
+    <h2>===_equals</h2>
+    <h3>1===1</h3>
+    <script>
+      document.write(1===1);
+    </script>
+    <h3>1===2</h3>
+    <script>
+      document.write(1===2);
+    </script>
+    <h2>%lt; less than</h2>
+    <h3>1%lt;2</h3>
+    <script>
+      document.write(1<2);
+    </script>
+    <h3>1%lt;1</h3>
+    <script>
+      document.write(1<1);
+    </script>
+
+    <h1>ex4_Conditional Statements</h1>
+
+    <h2>Program</h2>
+    <script>
+      document.write("1<br>");
+      document.write("2<br>");
+      document.write("3<br>");
+      document.write("4<br>");
+    </script>
+
+    <h2>IF-true</h2>
+    <script>
+      document.write("1<br>");
+      if (true) {
+      document.write("2<br>");
+    } else {
+    document.write("3<br>");
+    }
+      document.write("4<br>");
+    </script>
+
+    <h2>IF-false</h2>
+    <script>
+      document.write("1<br>");
+      if (false) {
+      document.write("2<br>");
+    } else {
+    document.write("3<br>");
+    }
+      document.write("4<br>");
+    </script>
+
+    <h1>ex5_Array</h1>
+
+    <h2>Syntax</h2>
+    <script>
+      var langs = ["cypher","sql","JavaScript","html","python"];
+      document.write(langs)
+    </script>
+    <h2>[index]_get</h2>
+    <script>
+      document.write(langs[0]);
+      document.write(langs[2]);
+    </script>
+    <h2>.push_add</h2>
+    <script>
+      langs.push("korean")
+      langs.push("english")
+      document.write(langs)
+    </script>
+    <h2>.length_count</h2>
+    <script>
+      document.write(langs.length)
+    </script>
+
+    <h1>ex6_Loop</h1>
+
+    <ul>
+      <script>
+        document.write('<li>1</li>');
+        var i = 0;
+        while (i < 5) {
+          document.write('<li>2</li>');
+          document.write('<li>3</li>');
+          i = i + 1 ;
+        }
+        document.write('<li>4</li>');
+      </script>
+    </ul>
+
+    <h1>ex7_Loop & Array</h1>
+
+    <script>
+      var langs = ['Korean','English','French','Cypher','Html','JavaScript'];
+    </script>
+    <h2>languages_I_speak</h2>
+    <ul>
+      <script>
+        var i = 0;
+        while (i<langs.length) {
+          document.write('<li><a href="https://en.wikipedia.org/wiki/'+langs[i]+'" target="_blank">'+langs[i]+'</a></li>');
+          i = i+1;
+        }
+      </script>
+
+      <h1>ex8_Function</h1>
+
+      <h2>Basic_function name()</h2>
+      <ul>
+        <script>
+          function two(){
+            document.write('<li>2-1</li>');
+            document.write('<li>2-2</li>');
+          }
+          document.write('<li>1</li>');
+          two();
+          document.write('<li>3</li>');
+          two();
+        </script>
+      </ul>
+      <h2>Parameter & Argument</h2>
+      <script>
+        function onePlusOne(){
+          document.write(1+1+'<br>');
+        }
+        onePlusOne();
+        function sum(left,right){ //left, right는 argument(매개변수)
+          document.write(left+right+'<br>');
+        }
+        function sumRed(left,right){
+          document.write('<div style="color:red">'+(left+right)+'</div>');
+        }//이거 연산이 아니고 문자로 합쳐지는데? 문자로 인식안하게 묶어줘야함
+        sum(2,4); //2,4는 parameter
+        sumRed(34,234);
+      </script>
+      <h2>Return</h2>
+      <script>
+        function sum2(left,right){
+          return left+right;
+        }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+        document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+      </script>
+
+      <h1>ex9_Object</h1>
+
+      <h2>Create_creating object as {"key":"value"}</h2>
+      <script type="text/javascript">
+        var langs = {
+          "Neo4j":"Cypher",
+          "RDB":"Sql",
+          "Web":"JavaScript",
+          "Jupyter":"Python"
+        };
+        document.write("Neo4j : "+langs.Neo4j+"<br>");
+        document.write("RDB : "+langs.RDB+"<br>");
+        document.write("Web : "+langs.Web+"<br>");
+        document.write("Jupyter : "+langs.Jupyter+"<br>");
+        langs.Korea = "Korean";
+        document.write("Korea : "+langs.Korea+"<br>");
+        langs["United States"] = "English";//이름 공백 포함 시 [] 안에 넣어주기
+        document.write("United States : "+langs["United States"]+"<br>");
+      </script>
+      <h2>Iterate_loop for(key in Object)</h2>
+      <script>
+        for(var key in langs){
+          document.write(langs[key]+' is used in '+key+'<br>');
+        }
+      </script>
+      <h2>Property & Method</h2>
+      <h5>Property: 객체에 소속된 변수(key값)</h5>
+      <h5>Method: 객체에 소속된 함수 ex_showAll</h5>
+      <script>
+        langs.showAll = function(){
+          for(var key in this) {
+            document.write(key+" : "+this[key]+'<br>');
+          }
+        }
+        langs.showAll();//왜 showAll부터 전부 그대로 출력되는거지?
+      </script>
+  </body>
+</html>
